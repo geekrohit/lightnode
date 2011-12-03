@@ -39,6 +39,10 @@ Provides a nice framework for dynamic server applications (routing). Provides st
 
 Tutorials still to come.
 
+Changes in this Fork
+--------------------
+
+Made the change to lightnode, so that the browser downloads the file from lightnode, instead of displaying it.
 
 Examples
 --------

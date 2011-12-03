@@ -360,6 +360,8 @@ exports.FileServer = type(exports.HttpServer, function() {
 			headers['last-modified'] = new(Date)(file.header.mtime).toUTCString()
 			headers['transfer-encoding'] = 'chunked'
 			headers['server'] = 'lightnode'
+			//This line below makes the file served to be downloaded through the browser, instead of being displayed.
+			headers['content-disposition'] = 'attachment'
 			
 			if (Date.parse(file.header.mtime) <= Date.parse(req.headers['if-modified-since'])) {
 				resp.writeHead(304, headers)
